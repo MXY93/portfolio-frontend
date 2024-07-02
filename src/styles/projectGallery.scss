@@ -1,0 +1,140 @@
+.project-gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.875rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 800px;
+    @media (max-width: 1200px){
+      display: flex;
+      height: fit-content;
+      justify-content: start;
+    }
+    @media (320px <= width <= 500px){
+      height: 100vw;
+    }
+    .slide1, .slide2 {
+      display: flex;
+      flex-direction: column;
+      animation: scroll 10s linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  
+    .slide1 {
+      animation-direction: normal;
+    }
+  
+    .slide2 {
+      animation-direction: reverse;
+    }
+    .slideX-container{
+      display: flex;
+      &:hover .slideX {
+        animation-play-state: paused;
+      }
+    }
+    .slideX {
+      animation: slideX 15s linear infinite;
+      display: flex;
+      height: fit-content;
+      max-width: none;
+    }
+}
+
+.project-gallery:before, .project-gallery:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  content: "";
+  z-index: 2;
+  @media (max-width: 1200px){
+    width: 60px;
+    height: 100%;
+  }
+}
+.project-gallery:before {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), #F2F5F8);
+  top: 0;
+  @media (max-width: 1200px){
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #F2F5F8);
+  }
+}
+
+.project-gallery:after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F5F8);
+  bottom: 0;
+  @media (max-width: 1200px){
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F2F5F8);
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+}
+
+@keyframes slide1 {
+  from {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(-100%)
+  }
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateY(-100%)
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes slideX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+body.darkmode {
+  .project-gallery:before {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #2C3E50);
+    @media (max-width: 1200px){
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), #2C3E50);
+    }
+  }
+  
+  .project-gallery:after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2C3E50);
+    @media (max-width: 1200px){
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), #2C3E50);
+    }
+  }
+}
+

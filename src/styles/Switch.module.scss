@@ -1,0 +1,60 @@
+
+.darkmode .switchBtn:hover{
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+}
+
+.switchBtn {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    padding: 0 0.5em;
+    border-radius: 10em;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, .1),
+                inset 0 8px 8px rgba(0, 0, 0, .1),
+                inset 0 -4px 4px rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    @media (max-width: 450px){
+      width: 17.5vw;
+    }
+  
+    .switchBtn__background {
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        right: -80px;
+        width: 300%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 10em;
+        z-index: -1;
+        @media (max-width: 450px){
+          right: -18vw;
+        }
+    }
+  
+    .switchBtn__indicator {
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0 8px 40px rgba(0,0,0, .2);
+      transition: transform .3s ease;
+  
+      .switchBtn__icon_container {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .darkmode .switchBtn__indicator {
+        background-color: red($color: #000000);
+    }
+  }
+  

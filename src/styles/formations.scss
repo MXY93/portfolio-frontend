@@ -1,0 +1,158 @@
+@import 'variables';
+
+.formation--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    h2 {
+        font-weight: bold;
+        font-size: 3.125rem;
+        @media (max-width: 500px){
+            font-size: 9vw;
+        }
+    }
+    .formation--card {
+        width: 55%;
+        gap: 7%;
+        height: 300px;
+        background-color: $dark-color;
+        color: $light-color;
+        display: flex;
+        margin: 0;
+        border-radius: 0.938rem;
+        @media (max-width: 1247px){
+            width: 65%;
+        }
+        @media (max-width: 1024px){
+            width: 80%;
+        }
+        @media (max-width:870px){
+            width: 90%;
+        }
+        @media (max-width:680px){
+            height: auto;
+            padding: 0.938rem;
+        }
+        .formation--img-n-skills {
+            @media (max-width: 670px){
+                display: none;
+            }
+            .formation--skills {
+                display: flex;
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                img {
+                    width: 35px;
+                    height: auto;
+                    margin: 0;
+                }
+            }
+        }
+        .formation--content {
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+            @media (max-width:680px){
+                gap: 0.938rem;
+            }
+            h3 {
+                font-size: 22px;
+               .colored-letter {
+                    position: relative;
+                    display: inline-block;
+                    color: transparent;
+                    background-color: #7452EB;
+                }
+                .colored-letter::before, .colored-letter::after {
+                    content: 'O';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: inherit;
+                    line-height: inherit;
+                    font-family: inherit;
+                }
+                .colored-letter::before {
+                    color: transparent;
+                    clip-path: polygon(0 0, 28% 0%, 28% 100%, 0% 100%)
+                }
+                .colored-letter::after {
+                    color: white;
+                    clip-path: polygon(28% 0%, 100% 0%, 100% 100%, 28% 100%)
+                }
+                .subtitle {
+                    margin-left: 3px;
+                    font-size: 1rem;
+                    @media (max-width: 670px){
+                        font-size: 2.5vw;
+                    }
+                    @media (max-width: 565px){
+                        font-size: 3.7vw;
+                    }
+                    @media (max-width: 425px){
+                        font-size: 4.7vw;
+                    }
+                    @media (max-width: 400px){
+                        font-size: 4.3vw;
+                    }
+                }
+                @media (max-width:870px){
+                    font-size: 3vw;
+                }
+                @media (max-width: 565px){
+                    font-size: 4vw;
+                }
+                @media (max-width: 425px){
+                    font-size: 5vw;
+                }
+            }
+            p {
+                font-size: 1rem;
+                @media (max-width: 670px){
+                    font-size: 2.5vw;
+                }
+                @media (max-width: 565px){
+                    font-size: 3.6vw;
+                }
+                @media (max-width: 425px){
+                    font-size: 4.1vw;
+                }
+                @media (max-width: 340px){
+                    font-size: 4.3vw;
+                }
+            }
+            
+        }
+        .formation--content, img {
+            margin: 30px;
+            @media (max-width:425px){
+                margin: 15px;
+            }
+        }
+        img {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body.darkmode .formation--card {
+    background-color: #415D76;
+    color: $light-color;
+    box-shadow: 0 0 20px #1D2935;
+}

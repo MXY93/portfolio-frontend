@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'switch';
+
+body.lightmode {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+body.darkmode {
+  background-color: $dark-color;
+  color: $light-color;
+  hr {
+    border: 3.5px solid $light-color;
+  }
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  @media (max-width: 1200px) {
+    gap: 12vw;
+  }
+  .homepage-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 9.375rem;
+    @media (max-width: 1200px) {
+      gap: 12vw;
+    }
+  }
+}
+
+hr {
+  border: 3.5px solid $dark-color;
+  border-radius: 5px;
+}
+
+body.lightmode .switchBtn {
+  .switchBtn__icon_container .fa-sun {
+    color: $light-icon-color;
+  }
+}

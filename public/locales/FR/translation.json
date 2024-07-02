@@ -1,0 +1,49 @@
+{
+    "nav_links__welcome" : "Accueil",
+    "nav_links__projects" : "Projets",
+    "nav_links__education" : "Formations",
+    "nav_links__cv" : "Mon CV",
+    "job_title" : "Développeur web",
+    "intro_text": "Entré dans le monde de la <1>Tech</1> depuis fin 2023, je ne cesse de m’épanouir dans l’apprentissage de ces nouvelles <2>compétences</2> qui me permettent de construire des projets innovants. Passionné par le développement web, mon objectif à long terme serait de mener des projets de grandes envergures ayant un réel impact sociétal ou environnemental.",
+    "button_skills" : "Découvrez mes compétences",
+    "projects": {
+        "booki": {
+        "description": "Site d'agence de voyage",
+        "descriptionOvl": "Ce projet m'a permis d'aborder les bases du développement web en HTML et CSS, ainsi que les notions d'accessibilité et de responsivité"
+        },
+        "bluel": {
+        "description": "Portfolio d'une architecte d'intérieur",
+        "descriptionOvl": "Ce projet m'a permis d'apprendre Javascript, de gérer les évènements utilisateurs, manipuler les éléments du DOM et récupérer les données utilisateurs via des formulaires"
+        },
+        "kasa": {
+        "description": "Site de réservation de logements",
+        "descriptionOvl": "Ce projet m'a permis d'apprendre à utiliser React, sa navigation, ses composants, de les styliser avec Sass ainsi que de m'initier aux animations CSS"
+        },
+        "grimoire": {
+        "description": "Site de notation de livres",
+        "descriptionOvl": "Ce projet m'a permis de concevoir le back-end d'un site web en créant un serveur avec Express, connecté à une base de données MongoDB. J'ai développé une API RESTful comprenant des opérations CRUD et mis en place un système d'authentification sécurisé utilisant des JWT pour la gestion des données"
+        }
+    }, 
+    "modal_button" : "Cliquez pour en savoir plus",
+    "tilt_card__ovrly" : "Cliquez sur l’icône pour voir le code source",
+    "section_title__education" : "Formations",
+    "section_title__skills" : "Compétences",
+    "section_title__skill_name" : "Passez la souris sur les compétences pour consulter leur nom",
+    "education" : {
+        "date" : "12/23 à 06/24",
+        "type" : "Développement web fullstack",
+        "content" : "Cette formation m'a permis de développer mes compétences techniques en construisant des sites web responsifs et dynamiques, en créant des API et des bases de données, ainsi qu'en optimisant les performances et le SEO. Développer des projets tels que des portfolios, des sites de logements ou des bibliothèques m'incite à aller plus loin et à travailler sur des projets de plus grande envergure."
+    },
+    "contact_form" : {
+        "title" : "Partagez-moi vos idées et collaborons ensemble !",
+        "input_name" : "Votre nom",
+        "name_required" : "Nom requis",
+        "input_mail" : "Votre email",
+        "mail_required" : "Email requis",
+        "input_message" : "Votre message",
+        "message_required" : "Message requis",
+        "button" : "Envoyer",
+        "validation_message" : "Message envoyé avec succès"
+    },
+    "footer_text" : "Tous droits réservés"
+}
