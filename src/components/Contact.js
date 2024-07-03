@@ -58,7 +58,7 @@ const ContactForm = () => {
       setSubmitting(false);
     }
   };
-
+  
   return (
     <div className='contact-container'>
       <Formik
