@@ -3,13 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const dotenv = require('dotenv');
-
-const env = dotenv.config().parsed;
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
-  return prev;
-}, {});
+const Dotenv = require('dotenv-webpack');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -30,7 +24,7 @@ module.exports = {
         { from: 'public', to: '.', globOptions: { ignore: ['**/index.html'] } },
       ],
     }),
-    new webpack.DefinePlugin(envKeys),
+    new Dotenv(),
     !isDevelopment && new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
