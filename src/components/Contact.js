@@ -33,7 +33,7 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch('https://www.maxime-videau.com/api/contact', {
+      const response = await fetch('https://maxime-videau-cfc94f57e56c.herokuapp.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
