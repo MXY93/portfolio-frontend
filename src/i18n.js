@@ -10,13 +10,13 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        debug: isDevelopment, // Active le débogage uniquement en développement
+        debug: isDevelopment,
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,
         },
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: '/locales/{{lng}}/translation.json',
         },
     });
 export default i18n;
