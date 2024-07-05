@@ -13,14 +13,13 @@ const ContentDiv = styled.div `
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: space-evenly;
     z-index: 1002;
     top: 33%;
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
     height: 45%;
-    padding: 35px 15px;
+    padding: 45px 25px;
     background-color: white;
     color: #2C3E50;
     border-radius: 10px;
