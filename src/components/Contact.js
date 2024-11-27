@@ -65,6 +65,8 @@ const ContactForm = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
+        validateOnBlur={false}
+        validateOnChange={false}
       >
         {({ isSubmitting }) => (
           <Form className="contact-form">
