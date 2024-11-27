@@ -71,7 +71,7 @@ const Header = () => {
             <NavLink to="/" onClick={() => { handleScroll('contact'); handleNavLinkClick(); }}>{t("Contact")}</NavLink>
           </li>
           <li className="headerLink">
-            <a href="/cv_maxime_videau.pdf" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}>{t("nav_links__cv")}</a>
+            <a href="/cv_portfolio_MV.pdf" target="_blank" rel="noopener noreferrer" onClick={handleNavLinkClick}>{t("nav_links__cv")}</a>
           </li>
         </ul>
         <div className="header-center">
