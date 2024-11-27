@@ -25,8 +25,12 @@
         gap: 1.25rem;
         margin: 0 30px;
         .skillsballs--ball {
-            width: 64px;
-            height: 64px;
+            width: 84px;
+            height: 84px;
+            @media (max-width: 1200px){
+                width: 64px;
+                height: 64px;
+            }
         }
     }
 }

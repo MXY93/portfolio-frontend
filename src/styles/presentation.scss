@@ -79,6 +79,7 @@ body.lightmode {
     }
     p {
         width: 80%;
+        max-width: 1400px;
         font-size: 1.25rem;
         @media (max-width: 917px){
             width: 90%;

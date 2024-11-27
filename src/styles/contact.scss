@@ -5,6 +5,7 @@
     justify-content: space-around;
     .contact-form {
         display: flex;
+        max-width: 705px;
         width: 45%;
         flex-direction: column;
         border-radius: 1.25rem;
